@@ -1,0 +1,24 @@
+# spcfw.ff, version 10/11/2023
+# units: kJ/mol, A, deg
+# bond and angle force constants are in the form k/2 (x - x0)^2
+# use 'cons' to indicate constrained bonds and angles
+# in improper dihedrals the central atom is the third in the list
+#
+# use with fftool to build input files for LAMMPS (or DLPOLY, GROMACS, OpenMM)
+
+ATOMS
+#     typ   m/u     q/e    pot   pars (sigma  epsilon)
+# SPC-Fw water
+OW   OW  15.999   -0.8200  lj    3.165492  0.6502994552
+HW   HW   1.008    0.4100  lj    0.000000  0.00000
+
+
+BONDS
+# i j    pot    re/A    kr/kJmol-1
+# SPC-Fw water
+OW  HW   harm   1.0120  4431.533808
+
+ANGLES
+# i j   k    pot    th/deg  ka/kjmol-1
+# SPC-Fw water
+HW  OW HW   harm   113.24  317.5656

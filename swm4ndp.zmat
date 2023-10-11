@@ -1,0 +1,10 @@
+swm4ndp
+# swm4-npd water 
+# http://www.sklogwiki.org/SklogWiki/index.php/SWM4-DP_model_of_water
+
+1  ODw
+2  Hw   1  0.9572
+3  Hw   1  0.9572   2  104.52
+4  M    1  0.24034  2   52.26
+
+swm4ndp.ff

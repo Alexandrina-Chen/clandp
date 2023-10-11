@@ -1,0 +1,25 @@
+# swm4ndp.ff, version 2023/08/08
+# units: kJ/mol, A, deg
+# bond and angle force constants are in the form k/2 (x - x0)^2
+# use 'cons' to indicate constrained bonds and angles
+# in improper dihedrals the central atom is the third in the list
+#
+# use with fftool to build input files for LAMMPS (or DLPOLY, GROMACS, OpenMM)
+
+ATOMS
+#     typ   m/u     q/e    pot   pars
+# swm4-ndp water
+ODw   ODw  15.999   0.000  lj    3.183950  0.88257296
+Hw    Hw   1.008    0.5573 lj    1.00   0.00000
+M     M    0.00001 -1.1146 lj    1.00   0.00000
+
+BONDS
+# i j    pot    re/A    kr/kJmol-1
+# swm4-ndp water
+ODw Hw   harm   0.9572  4331.52
+ODw  M   harm   0.24034 4184.0
+
+ANGLES
+# i j   k    pot    th/deg  ka/kjmol-1
+# swm4-ndp water
+Hw  ODw Hw   harm   104.52  317.57
